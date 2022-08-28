@@ -1,0 +1,71 @@
+{
+  "name": "urpm",
+  "version": "0.0.3",
+  "packageManager": "pnpm@7.4.0",
+  "description": "Use the right package manager",
+  "author": "Joruno-w <1710642275@qq.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/joruno/urpm#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joruno/urpm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joruno/urpm/issues"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "ni": "bin/ni.mjs",
+    "nci": "bin/nci.mjs",
+    "nr": "bin/nr.mjs",
+    "nu": "bin/nu.mjs",
+    "nx": "bin/nx.mjs",
+    "na": "bin/na.mjs",
+    "nun": "bin/nun.mjs"
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "dev": "esno src/commands/ni.ts",
+    "build": "unbuild",
+    "stub": "unbuild --stub",
+    "release": "bumpp && npm publish",
+    "lint": "eslint .",
+    "test": "vitest",
+    "pub": "npm publish"
+  },
+  "devDependencies": {
+    "@types/ini": "^1.3.31",
+    "@types/node": "^18.0.4",
+    "@types/prompts": "^2.4.0",
+    "@types/which": "^2.0.1",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.19.0",
+    "esno": "^0.16.3",
+    "execa": "^6.1.0",
+    "fast-glob": "^3.2.11",
+    "find-up": "^6.3.0",
+    "ini": "^3.0.0",
+    "prompts": "^2.4.2",
+    "rimraf": "^3.0.2",
+    "terminal-link": "^3.0.0",
+    "typescript": "^4.7.4",
+    "unbuild": "^0.7.4",
+    "vitest": "^0.18.0",
+    "which": "^2.0.2"
+  },
+  "eslintConfig": {
+    "extends": "@joruno"
+  }
+}
