@@ -10,9 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/Joruno-w/urpm.git"
   },
-  "bugs": {
-    "url": "https://github.com/Joruno-w/urpm/issues"
-  },
+  "bugs": "https://github.com/Joruno-w/urpm/issues",
   "exports": {
     ".": {
       "require": "./dist/index.cjs",
