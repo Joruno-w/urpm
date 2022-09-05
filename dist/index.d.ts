@@ -85,7 +85,7 @@ interface DetectOptions {
     autoInstall?: boolean;
     cwd?: string;
 }
-declare function detect({ autoInstall, cwd }: DetectOptions): Promise<"npm" | "pnpm" | "yarn" | "yarn@berry" | "pnpm@6" | "bun" | null>;
+declare function detect({ autoInstall, cwd }: DetectOptions): Promise<"npm" | "yarn" | "pnpm" | "bun" | "yarn@berry" | "pnpm@6" | null>;
 
 interface RunnerContext {
     hasLock?: boolean;
@@ -108,8 +108,8 @@ interface Config {
     globalAgent: Agent;
 }
 declare function getConfig(): Promise<Config>;
-declare function getDefaultAgent(): Promise<"npm" | "pnpm" | "yarn" | "yarn@berry" | "pnpm@6" | "bun" | "prompt">;
-declare function getGlobalAgent(): Promise<"npm" | "pnpm" | "yarn" | "yarn@berry" | "pnpm@6" | "bun">;
+declare function getDefaultAgent(): Promise<"npm" | "yarn" | "pnpm" | "bun" | "yarn@berry" | "pnpm@6" | "prompt">;
+declare function getGlobalAgent(): Promise<"npm" | "yarn" | "pnpm" | "bun" | "yarn@berry" | "pnpm@6">;
 
 declare function remove<T>(arr: T[], v: T): T[];
 declare function exclude<T>(arr: T[], v: T): T[];

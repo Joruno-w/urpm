@@ -17,7 +17,7 @@ import require$$2$1 from 'util';
 import { promises } from 'node:fs';
 import require$$1 from 'tty';
 
-const version = "0.0.4";
+const version = "0.0.5";
 
 const npmRun = (agent) => (args) => {
   if (args.length > 1)

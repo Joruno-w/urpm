@@ -38,7 +38,7 @@ const require$$0__default$3 = /*#__PURE__*/_interopDefaultLegacy(require$$0$3);
 const require$$2__default$1 = /*#__PURE__*/_interopDefaultLegacy(require$$2$1);
 const require$$1__default = /*#__PURE__*/_interopDefaultLegacy(require$$1);
 
-const version = "0.0.4";
+const version = "0.0.5";
 
 const npmRun = (agent) => (args) => {
   if (args.length > 1)

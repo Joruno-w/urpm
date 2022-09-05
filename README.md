@@ -218,38 +218,3 @@ globalAgent=npm
 # custom configuration file path
 export NI_CONFIG_FILE="$HOME/.config/ni/nirc"
 ```
-
-<br>
-
-### How?
-
-**ni** assumes that you work with lockfiles (and you should)
-
-Before it runs, it will detect your `yarn.lock` / `pnpm-lock.yaml` / `package-lock.json` / `bun.lockb` to know current package manager (or `packageManager` field in your packages.json if specified), and runs the [corresponding commands](https://github.com/joruno/ni/blob/main/src/agents.ts).
-
-### Trouble shooting
-
-#### Conflicts with PowerShell on Windows
-
-PowerShell come with a built-in alias `ni` for `New Item`. To remove the alias in favor of this package:
-
-<details>
-<summary> PowerShell <code>5.x</code></summary>
-
-Create or edit file `C:\Windows\System32\WindowsPowerShell\v1.0\Microsoft.PowerShell_profile.ps1`, adding following line:
-
-```ps
-Remove-Item Alias:ni -Force -ErrorAction Ignore
-```
-
-</details>
-<details>
-<summary> PowerShell <code>7.x</code></summary>
-
-Create or edit file `C:\Program Files\PowerShell\7\Microsoft.PowerShell_profile.ps1`, adding following line:
-
-```ps
-Remove-Alias -Name ni -Force
-```
-
-</details>
