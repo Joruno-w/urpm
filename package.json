@@ -1,9 +1,9 @@
 {
   "name": "urpm",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "packageManager": "pnpm@7.4.0",
   "description": "Use the right package manager",
-  "author": "Joruno-w",
+  "author": "Joruno-w <1710642275@qq.com>",
   "license": "MIT",
   "homepage": "https://github.com/Joruno-w/urpm#readme",
   "repository": {
@@ -17,6 +17,25 @@
       "import": "./dist/index.mjs"
     }
   },
+  "keywords": [
+    "npm",
+    "yarn",
+    "pnpm",
+    "bun",
+    "install",
+    "uninstall",
+    "update",
+    "upgrade",
+    "ci",
+    "CI",
+    "npx",
+    "run",
+    "dev",
+    "global",
+    "-g",
+    "remove",
+    "up"
+  ],
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
